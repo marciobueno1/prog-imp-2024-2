@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Antes da ordenação");
         imprimir(v);
         // insertionSort(v, v.length);
-        selectionSort(v, v.length);
+        // selectionSort(v, v.length);
         bubbleSort(v, v.length);
         System.out.println("Após a ordenação");
         imprimir(v);
@@ -73,5 +73,39 @@ public class Main {
             }
         }
         System.out.println(" }");
+    }
+
+    public static int busca(int[] v, int x) {
+        for (int i = 0; i < v.length; ++i) {
+            if (v[i] == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static int buscaMelhorada(int[] v, int x) {
+        for (int i = 0; i < v.length && v[i] <= x; ++i) {
+            if (v[i] == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    // nesta versão a última posição do vetor está VAZIA!!!
+    public static int buscaMelhoradaComSentinela(int[] v, int x) {
+        int i = 0;
+        v[v.length - 1] = x;
+        while (v[i] < x) {
+            ++i;
+        }
+        if (i == v.length - 1) {
+            return -1;
+        }
+        if (v[i] == x) {
+            return i;
+        }
+        return -1;
     }
 }
