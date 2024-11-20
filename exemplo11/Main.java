@@ -30,7 +30,7 @@ public class Main {
     return p;
   }
 
-    public static Pessoa lerPessoaV2() {
+  public static Pessoa lerPessoaV2() {
     System.out.print("Digite o nome da pessoa: ");
     String nome = ler.nextLine();
     System.out.print("Digite a idade da pessoa: ");
