@@ -15,18 +15,13 @@ public class Main {
     int indiceMaisAlta = pessoaMaisAlta(pessoas);
     System.out.println("A pessoa mais alta é " + pessoas[indiceMaisAlta].nome);
     System.out.print("A pessoa mais alta é ");
-    imprimir(pessoas[indiceMaisAlta]);
+    System.out.println(pessoas[indiceMaisAlta]);
   }
   
-  public static void imprimir(Pessoa p) {
-    System.out.printf("{ %s, idade = %d, peso = %.2f, alt = %.2f }\n",
-        p.nome, p.idade, p.peso, p.altura);
-  }
-
   public static void imprimir(Pessoa[] pessoas) {
     System.out.println("=============Listagem de Pessoas=============");
     for (int i = 0; i < pessoas.length; ++i) {
-      imprimir(pessoas[i]);
+      System.out.println(pessoas[i]);
     }
   }
 

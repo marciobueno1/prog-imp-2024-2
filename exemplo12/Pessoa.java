@@ -15,4 +15,9 @@ public class Pessoa {
     this.peso = peso;
     this.altura = altura;
   }
+
+  public String toString() {
+    return String.format("{ %s, idade = %d, peso = %.2f, alt = %.2f }",
+        this.nome, this.idade, this.peso, this.altura);
+  }
 }
